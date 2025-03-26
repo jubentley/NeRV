@@ -46,27 +46,25 @@ namespace NeRV
 
             Console.Clear();
 
-            Console.WriteLine($"NeRV (.Net Runtime Version) v1.2 {
-                (Environment.Is64BitProcess ? "x64" : "x86")} Justin Bentley 2025\n");
+            string architecture = Environment.Is64BitProcess ? "x64" : "x86";
 
-            Console.WriteLine($"""
-             ~~ Latest GitHub Release ~~
+            Console.WriteLine($"NeRV (.Net Runtime Version) v1.2 {architecture} Justin Bentley 2025\n");
 
-             ID:          {releaseDetails.id}
-             Tag Name:    {releaseDetails.tag_name}
-             Name:        {releaseDetails.name}
-             CompareVal:  {releaseDetails.remoteVersion}
-             Draft?:      {releaseDetails.draft}
-             Prerelease?: {releaseDetails.prerelease}
-             Body:        {releaseDetails.body}
-             Created:     {releaseDetails.created_at:yyyy-MM-ddTHH:mm:ssZ}
-             Published:   {releaseDetails.published_at:yyyy-MM-ddTHH:mm:ssZ}
-             TimeNow:     {DateTime.UtcNow:yyyy-MM-ddTHH:mm:ssZ}
-
-                   ~~ Local ~~
-                
-             Current .NET Version: {localVersion}
-            """);
+            Console.WriteLine(
+                "~~ Latest GitHub Release ~~\n\n" +
+                $"ID:          {releaseDetails.id}\n" +
+                $"Tag Name:    {releaseDetails.tag_name}\n" +
+                $"Name:        {releaseDetails.name}\n" +
+                $"CompareVal:  {releaseDetails.remoteVersion}\n" +
+                $"Draft?:      {releaseDetails.draft}\n" +
+                $"Prerelease?: {releaseDetails.prerelease}\n" +
+                $"Body:        {releaseDetails.body}\n" +
+                $"Created:     {releaseDetails.created_at:yyyy-MM-ddTHH:mm:ssZ}\n" +
+                $"Published:   {releaseDetails.published_at:yyyy-MM-ddTHH:mm:ssZ}\n" +
+                $"TimeNow:     {DateTime.UtcNow:yyyy-MM-ddTHH:mm:ssZ}\n\n" +
+                "      ~~ Local ~~\n\n" +
+                $"Current .NET Version: {localVersion}"
+            );
 
             //compare remote .Net version (github) to local
             if (localVersion == releaseDetails.remoteVersion)
