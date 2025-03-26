@@ -116,7 +116,7 @@ namespace NeRV
                             name = release.name,
                             draft = release.draft,
                             prerelease = release.prerelease,
-                            body = release.body.Split('\n')[0],     // trim at newline | 1 line body OK
+                            body = release.body.Split('\n')[0],     // trim at newline | single line OK
                             created_at = release.created_at,
                             published_at = release.published_at,
                             remoteVersion = release.tag_name.Substring(1) // remove 'v' prefix
