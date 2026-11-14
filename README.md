@@ -8,7 +8,7 @@ NeRV performs this by querying github for the latest Release of .Net Core and co
 ![og-image](NeRV8.png)
 
 ## Notice
-If you are using this program to see if there is a new version to manually update, see this video:<br/>
+If you are using this program on Windows Server to see if there is a new version to manually update, see this video:<br/>
 <a href="https://www.youtube.com/watch?v=UcACNMGSByc">
     Youtube - Justin Bentley BSE - Setup Automatic Updates for .Net Core Runtimes on Windows Server
 </a>
