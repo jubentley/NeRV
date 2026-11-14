@@ -5,10 +5,12 @@ namespace NeRVTest
     public class MultiVersionApiTest
     {
         [Theory]
-        [InlineData(6)]
-        [InlineData(7)]
+        // [InlineData(6)] Discontinued on Github, can delete
+        // [InlineData(7)] Discontinued on Github, can delete
         [InlineData(8)]
         [InlineData(9)]
+        [InlineData(10)]
+        [InlineData(11)]
         public async Task Verify(int netMajor)
         {
             // Arrange
